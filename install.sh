@@ -57,7 +57,6 @@ apt-get install -y g++-$GCC_VERSION-multilib \
                    libc++abi-$LLVM_VERSION-dev \
                    openjdk-$OPENJDK_VERSION-jdk \
                    fpc \
-                   python2.7 \
                    python3.9 \
                    python3.10 \
                    python3.11 \

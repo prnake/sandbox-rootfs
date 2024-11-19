@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
-GCC_VERSION="12"
+GCC_VERSION="13"
 LLVM_VERSION="17"
-OPENJDK_VERSION="17"
-GHC_VERSION="9.0.1"
+OPENJDK_VERSION="21"
+GHC_VERSION="9.6.2"
 
 UBUNTU_CODENAME="$(source /etc/os-release && echo "$UBUNTU_CODENAME")"
 UBUNTU_VERSION="$(source /etc/os-release && echo "$VERSION_ID")"
@@ -45,8 +45,8 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BF
 echo "deb http://apt.llvm.org/$UBUNTU_CODENAME/ llvm-toolchain-$UBUNTU_CODENAME-$LLVM_VERSION main" > /etc/apt/sources.list.d/llvm.list
 echo "deb http://ppa.launchpad.net/deadsnakes/ppa/ubuntu $UBUNTU_CODENAME main" > /etc/apt/sources.list.d/python.list
 echo "deb http://ppa.launchpad.net/longsleep/golang-backports/ubuntu $UBUNTU_CODENAME main" >  /etc/apt/sources.list.d/go.list
-echo "deb http://ppa.launchpad.net/hvr/ghc/ubuntu focal main" > /etc/apt/sources.list.d/haskell.list
-echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" > /etc/apt/sources.list.d/mono.list
+echo "deb http://ppa.launchpad.net/hvr/ghc/ubuntu noble main" > /etc/apt/sources.list.d/haskell.list
+echo "deb https://download.mono-project.com/repo/ubuntu stable-noble main" > /etc/apt/sources.list.d/mono.list
 
 # Install some language support via APT
 apt-get update

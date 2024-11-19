@@ -60,6 +60,9 @@ apt-get install -y g++-$GCC_VERSION-multilib \
                    python2.7 \
                    python3.9 \
                    python3.10 \
+                   python3.11 \
+                   python3.12 \
+                   python3.13 \
                    golang-go \
                    ghc-$GHC_VERSION \
                    mono-devel \
